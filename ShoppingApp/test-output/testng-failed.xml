@@ -5,7 +5,7 @@
     <classes>
       <class name="mytestpackage.test.StandAlone">
         <methods>
-          <include name="submitOrder"/>
+          <include name="submitOrder" invocation-numbers="1"/>
           <include name="verifyProduct"/>
           <include name="launchBrowser"/>
           <include name="closeBrowser"/>
