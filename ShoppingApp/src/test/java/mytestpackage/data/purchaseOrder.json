@@ -1,14 +1,16 @@
 [
 {
-	"email" : "yashpal@gmail.com",
-	"password" : "demo123",
-	"productname" : "demo1"
+	"email" : "salmankhan123@gmail.com",
+	"password" : "Salman@123",
+	"productname" : "IPHONE 13 PRO",
+	"country" : "india"
 },
 
 {
-	"email" : "yashpl111@gmail.com",
-	"password" : "demo123",
-	"productname" : "demo1"
+	"email" : "bahubali123@gmail.com",
+	"password" : "Bahubali@123",
+	"productname" : "ADIDAS ORIGINAL",
+	"country" : "nepal"
 
 }
 

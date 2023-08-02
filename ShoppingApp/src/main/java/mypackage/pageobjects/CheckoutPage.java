@@ -1,5 +1,7 @@
 package mypackage.pageobjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,8 +20,8 @@ public class CheckoutPage {
 	@FindBy(xpath="//input[@placeholder='Select Country']")
 	WebElement countryfield;
 	
-	@FindBy(xpath="//section/button[2]")
-	WebElement country;
+	@FindBy(xpath="//div/section/button/span")
+	List<WebElement> countries;
 	
 	@FindBy(xpath="//div[@class='actions'] /a")
 	WebElement placeorder;
@@ -28,7 +30,9 @@ public class CheckoutPage {
 	public void enterAndSelectCountry(String countryname){
 		
 		countryfield.sendKeys(countryname);
+		WebElement country = countries.stream().filter(allcountry->allcountry.getText().equalsIgnoreCase(countryname)).findAny().orElse(null);
 		country.click();
+		
 	}
 	
 	public ReceiptPage clickOnPlaceOrder(){

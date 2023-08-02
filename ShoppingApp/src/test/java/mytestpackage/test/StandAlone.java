@@ -29,21 +29,21 @@ import mytestpackage.testcomponent.BaseTest;
 
 public class StandAlone extends BaseTest {
 
-	String productname = "IPHONE 13 PRO";
-	String countryname = "india";
-	String useremail = "salmankhan123@gmail.com";
-	String userpassword ="Salman@123";
+	//String productname = "IPHONE 13 PRO";
+	//String countryname = "india";
+	//String useremail = "salmankhan123@gmail.com";
+	//String userpassword ="Salman@123";
 	String ordersuccess = "THANKYOU FOR THE ORDER.";
 
 	
-	@Test
-	public void submitOrder() throws IOException {
+	@Test(dataProvider="getLoginData")
+	public void submitOrder(HashMap<String,String> input) throws IOException {
 		
-		ProductCatalogue prodcat = loginobject.LoginToApp(useremail,userpassword);
-		CartPage cartpage = prodcat.addToCart(productname);
+		ProductCatalogue prodcat = loginobject.LoginToApp(input.get("email"),input.get("password"));
+		CartPage cartpage = prodcat.addToCart(input.get("productname"));
 		
-		CheckoutPage checkout = cartpage.clickOnCheckout(productname);
-		checkout.enterAndSelectCountry(countryname);
+		CheckoutPage checkout = cartpage.clickOnCheckout(input.get("productname"));
+		checkout.enterAndSelectCountry(input.get("country"));
 		
 		ReceiptPage receiptpage = checkout.clickOnPlaceOrder();
 		Assert.assertEquals(ordersuccess,receiptpage.VerifyOrder());
@@ -51,24 +51,26 @@ public class StandAlone extends BaseTest {
 		}
 
 
-	@Test (dependsOnMethods={"submitOrder"})
-	public void verifyProduct() throws IOException {
+	@Test (dependsOnMethods={"submitOrder"},dataProvider="getLoginData")
+	public void verifyProduct(HashMap<String,String> input) throws IOException {
 
-		ProductCatalogue prodcat = loginobject.LoginToApp(useremail,userpassword);
+		ProductCatalogue prodcat = loginobject.LoginToApp(input.get("email"),input.get("password"));
 		OrdersPage orderpage = prodcat.goToOrders();
-		Assert.assertTrue(orderpage.verifyOrderProduct(productname));
+		Assert.assertTrue(orderpage.verifyOrderProduct(input.get("productname")));
 		
 	}
 
-	/*
+	
 	@DataProvider
-	public Object[][] getLoginData() {
+	public Object[][] getLoginData() throws IOException {
 		
-		HashMap<String,String> map = new HashMap<String,String>();
+		/*HashMap<String,String> map = new HashMap<String,String>();
 		map.put("email","yashpal@demo.com");
 		map.put("password","demo123");
-		map.put("productname","IPHONE 13 PRO");
+		map.put("productname","IPHONE 13 PRO"); */
+		List<HashMap<String,String>> data = getJasonDataToMap(System.getProperty("user.dir")+ "\\src\\test\\java\\mytestpackage\\data\\purchaseOrder.json");
 		
-		return  Object [] {{map}};
-	} */
+		return new Object [][] {{data.get(0)},{data.get(1)}};
+	}
+	
 }
