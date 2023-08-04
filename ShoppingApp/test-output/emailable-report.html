@@ -8,14 +8,24 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">31,101</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">2</td><td class="num">21,278</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">mytestpackage.test.StandAlone</td><td><a href="#m0">submitOrder</a></td><td rowspan="2">1691063242378</td><td rowspan="2">4416</td></tr><tr class="passedeven"><td><a href="#m1">submitOrder</a></td></tr><tr class="passedeven"><td><a href="#m2">verifyProduct</a></td><td rowspan="2">1691063254551</td><td rowspan="2">534</td></tr><tr class="passedeven"><td><a href="#m3">verifyProduct</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">mytestpackage.test.StandAlone</td><td><a href="#m0">submitOrder</a></td><td rowspan="2">1691151332478</td><td rowspan="2">4303</td></tr><tr class="failedeven"><td><a href="#m1">submitOrder</a></td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">mytestpackage.test.StandAlone</td><td><a href="#m2">verifyProduct</a></td><td rowspan="1">1691151336930</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">mytestpackage.test.ValidationErrorTest</td><td><a href="#m3">checkLogin</a></td><td rowspan="1">1691151318798</td><td rowspan="1">188</td></tr><tr class="passedeven"><td><a href="#m4">errorMessage</a></td><td rowspan="1">1691151321473</td><td rowspan="1">359</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">mytestpackage.test.StandAlone#submitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{country=nepal, productname=ADIDAS ORIGINAL, password=Bahubali@123, email=bahubali123@gmail.com}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">mytestpackage.test.StandAlone#submitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{country=india, productname=IPHONE 13 PRO, password=Salman@123, email=salmankhan123@gmail.com}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">mytestpackage.test.StandAlone#verifyProduct</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{country=india, productname=IPHONE 13 PRO, password=Salman@123, email=salmankhan123@gmail.com}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">mytestpackage.test.StandAlone#verifyProduct</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{country=nepal, productname=ADIDAS ORIGINAL, password=Bahubali@123, email=bahubali123@gmail.com}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">mytestpackage.test.StandAlone#submitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{country=nepal, productname=ADIDAS ORIGINAL, password=Bahubali@123, email=bahubali123@gmail.com}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [THANKYOU FOR THE ORDER.] but found [THANK FOR THE ORDER.]
+	at mytestpackage.test.StandAlone.submitOrder(StandAlone.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">mytestpackage.test.StandAlone#submitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{country=india, productname=IPHONE 13 PRO, password=Salman@123, email=salmankhan123@gmail.com}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [THANKYOU FOR THE ORDER.] but found [THANK FOR THE ORDER.]
+	at mytestpackage.test.StandAlone.submitOrder(StandAlone.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">mytestpackage.test.StandAlone#verifyProduct</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method mytestpackage.test.StandAlone.verifyProduct() on instance mytestpackage.test.StandAlone@b7c4869 depends on not successfully finished methods 
+[mytestpackage.test.StandAlone.submitOrder() on instance mytestpackage.test.StandAlone@b7c4869]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">mytestpackage.test.ValidationErrorTest#checkLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">mytestpackage.test.ValidationErrorTest#errorMessage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

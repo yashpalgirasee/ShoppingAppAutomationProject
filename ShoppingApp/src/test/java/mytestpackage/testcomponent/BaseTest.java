@@ -34,7 +34,7 @@ public class BaseTest{
 	public WebDriver initializeBrowser() throws IOException {
 	
 	Properties prop = new Properties();
-	FileInputStream file = new FileInputStream("C:\\Users\\Xunison\\git\\MyShoppingCartFramework\\ShoppingApp\\src\\main\\java\\mypackage\\resources\\GlobalDate.properties");
+	FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\mypackage\\resources\\GlobalDate.properties");
 	prop.load(file);
 	
 	String browsername = prop.getProperty("browser");
@@ -62,7 +62,7 @@ public class BaseTest{
 	
 	}
 	
-	public String getScreenshot(String testCaseName) throws IOException {
+	public String getScreenshot(String testCaseName , WebDriver driver) throws IOException {
 		
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
