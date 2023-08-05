@@ -15,6 +15,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -37,7 +39,9 @@ public class BaseTest{
 	FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\mypackage\\resources\\GlobalDate.properties");
 	prop.load(file);
 	
-	String browsername = prop.getProperty("browser");
+	
+	
+		String browsername = System.getProperty("browser")!=null? System.getProperty("browser"):prop.getProperty("browser");
 	
 		if(browsername.equalsIgnoreCase("chrome")) {
 			
@@ -47,12 +51,14 @@ public class BaseTest{
 		}
 		else if(browsername.equalsIgnoreCase("firefox")) {
 		
-			// setup firefox broswer here
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
 		
 		}
 		else if(browsername.equalsIgnoreCase("edge")) {
 		
-			// setup edge browser here
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
 		}
 
 		driver.manage().window().maximize();

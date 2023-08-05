@@ -1,43 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="2" failed="2" skipped="1">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-04T17:45:15 IST" name="Suite" finished-at="2023-08-04T17:45:36 IST" duration-ms="21278">
+  <suite started-at="2023-08-05T11:29:02 IST" name="Suite" finished-at="2023-08-05T11:29:19 IST" duration-ms="16752">
     <groups>
     </groups>
-    <test started-at="2023-08-04T17:45:15 IST" name="Test" finished-at="2023-08-04T17:45:36 IST" duration-ms="21278">
+    <test started-at="2023-08-05T11:29:02 IST" name="Test" finished-at="2023-08-05T11:29:19 IST" duration-ms="16752">
       <class name="mytestpackage.test.ValidationErrorTest">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:mytestpackage.test.ValidationErrorTest@ab7395e]" started-at="2023-08-04T17:45:15 IST" name="launchBrowser" finished-at="2023-08-04T17:45:18 IST" duration-ms="3121" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:mytestpackage.test.ValidationErrorTest@3f9342d4]" started-at="2023-08-05T11:29:02 IST" name="launchBrowser" finished-at="2023-08-05T11:29:04 IST" duration-ms="2129" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="checkLogin()[pri:0, instance:mytestpackage.test.ValidationErrorTest@ab7395e]" started-at="2023-08-04T17:45:18 IST" name="checkLogin" finished-at="2023-08-04T17:45:18 IST" duration-ms="188" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkLogin -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:mytestpackage.test.ValidationErrorTest@ab7395e]" started-at="2023-08-04T17:45:18 IST" name="closeBrowser" finished-at="2023-08-04T17:45:19 IST" duration-ms="77" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:mytestpackage.test.ValidationErrorTest@ab7395e]" started-at="2023-08-04T17:45:19 IST" name="launchBrowser" finished-at="2023-08-04T17:45:21 IST" duration-ms="2404" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="errorMessage()[pri:0, instance:mytestpackage.test.ValidationErrorTest@ab7395e]" started-at="2023-08-04T17:45:21 IST" name="errorMessage" finished-at="2023-08-04T17:45:21 IST" duration-ms="359" status="PASS">
+        <test-method signature="errorMessage()[pri:0, instance:mytestpackage.test.ValidationErrorTest@3f9342d4]" started-at="2023-08-05T11:29:04 IST" name="errorMessage" finished-at="2023-08-05T11:29:04 IST" duration-ms="416" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Incorrect email or password.] but found [Incorrect email or passwor.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Incorrect email or password.] but found [Incorrect email or passwor.]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at mytestpackage.test.ValidationErrorTest.errorMessage(ValidationErrorTest.java:17)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- errorMessage -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:mytestpackage.test.ValidationErrorTest@ab7395e]" started-at="2023-08-04T17:45:21 IST" name="closeBrowser" finished-at="2023-08-04T17:45:21 IST" duration-ms="79" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:mytestpackage.test.ValidationErrorTest@3f9342d4]" started-at="2023-08-05T11:29:05 IST" name="closeBrowser" finished-at="2023-08-05T11:29:05 IST" duration-ms="74" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- mytestpackage.test.ValidationErrorTest -->
       <class name="mytestpackage.test.StandAlone">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:mytestpackage.test.StandAlone@b7c4869]" started-at="2023-08-04T17:45:22 IST" name="launchBrowser" finished-at="2023-08-04T17:45:24 IST" duration-ms="2329" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:mytestpackage.test.StandAlone@7e4204e2]" started-at="2023-08-05T11:29:02 IST" name="launchBrowser" finished-at="2023-08-05T11:29:04 IST" duration-ms="1971" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:mytestpackage.test.StandAlone@b7c4869]" started-at="2023-08-04T17:45:24 IST" name="submitOrder" data-provider="getLoginData" finished-at="2023-08-04T17:45:28 IST" duration-ms="4352" status="FAIL">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:mytestpackage.test.StandAlone@7e4204e2]" started-at="2023-08-05T11:29:04 IST" name="submitOrder" data-provider="getLoginData" finished-at="2023-08-05T11:29:08 IST" duration-ms="4428" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,62 +64,18 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [THANKYOU FOR THE ORDER.] but found [THANK FOR THE ORDER.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [THANKYOU FOR THE ORDER.] but found [THANK FOR THE ORDER.]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at mytestpackage.test.StandAlone.submitOrder(StandAlone.java:49)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:mytestpackage.test.StandAlone@b7c4869]" started-at="2023-08-04T17:45:28 IST" name="closeBrowser" finished-at="2023-08-04T17:45:28 IST" duration-ms="70" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:mytestpackage.test.StandAlone@7e4204e2]" started-at="2023-08-05T11:29:08 IST" name="closeBrowser" finished-at="2023-08-05T11:29:08 IST" duration-ms="40" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:mytestpackage.test.StandAlone@b7c4869]" started-at="2023-08-04T17:45:28 IST" name="launchBrowser" finished-at="2023-08-04T17:45:32 IST" duration-ms="3582" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:mytestpackage.test.StandAlone@7e4204e2]" started-at="2023-08-05T11:29:08 IST" name="launchBrowser" finished-at="2023-08-05T11:29:11 IST" duration-ms="2445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:mytestpackage.test.StandAlone@b7c4869]" started-at="2023-08-04T17:45:32 IST" name="submitOrder" data-provider="getLoginData" finished-at="2023-08-04T17:45:36 IST" duration-ms="4303" status="FAIL">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:mytestpackage.test.StandAlone@7e4204e2]" started-at="2023-08-05T11:29:11 IST" name="submitOrder" data-provider="getLoginData" finished-at="2023-08-05T11:29:15 IST" duration-ms="4309" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -108,91 +83,51 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [THANKYOU FOR THE ORDER.] but found [THANK FOR THE ORDER.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [THANKYOU FOR THE ORDER.] but found [THANK FOR THE ORDER.]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at mytestpackage.test.StandAlone.submitOrder(StandAlone.java:49)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:mytestpackage.test.StandAlone@b7c4869]" started-at="2023-08-04T17:45:36 IST" name="closeBrowser" finished-at="2023-08-04T17:45:36 IST" duration-ms="42" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:mytestpackage.test.StandAlone@7e4204e2]" started-at="2023-08-05T11:29:15 IST" name="closeBrowser" finished-at="2023-08-05T11:29:15 IST" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method signature="verifyProduct(java.util.HashMap)[pri:0, instance:mytestpackage.test.StandAlone@b7c4869]" started-at="2023-08-04T17:45:36 IST" name="verifyProduct" finished-at="2023-08-04T17:45:36 IST" depends-on-methods="mytestpackage.test.StandAlone.submitOrder" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method mytestpackage.test.StandAlone.verifyProduct() on instance mytestpackage.test.StandAlone@b7c4869 depends on not successfully finished methods 
-[mytestpackage.test.StandAlone.submitOrder() on instance mytestpackage.test.StandAlone@b7c4869]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method mytestpackage.test.StandAlone.verifyProduct() on instance mytestpackage.test.StandAlone@b7c4869 depends on not successfully finished methods 
-[mytestpackage.test.StandAlone.submitOrder() on instance mytestpackage.test.StandAlone@b7c4869]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:mytestpackage.test.StandAlone@7e4204e2]" started-at="2023-08-05T11:29:15 IST" name="launchBrowser" finished-at="2023-08-05T11:29:16 IST" duration-ms="1073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="verifyProduct(java.util.HashMap)[pri:0, instance:mytestpackage.test.StandAlone@7e4204e2]" started-at="2023-08-05T11:29:16 IST" name="verifyProduct" data-provider="getLoginData" finished-at="2023-08-05T11:29:17 IST" depends-on-methods="mytestpackage.test.StandAlone.submitOrder" duration-ms="480" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{country=india, productname=IPHONE 13 PRO, password=Salman@123, email=salmankhan123@gmail.com}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyProduct -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:mytestpackage.test.StandAlone@7e4204e2]" started-at="2023-08-05T11:29:17 IST" name="closeBrowser" finished-at="2023-08-05T11:29:17 IST" duration-ms="73" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:mytestpackage.test.StandAlone@7e4204e2]" started-at="2023-08-05T11:29:17 IST" name="launchBrowser" finished-at="2023-08-05T11:29:18 IST" duration-ms="1089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="verifyProduct(java.util.HashMap)[pri:0, instance:mytestpackage.test.StandAlone@7e4204e2]" started-at="2023-08-05T11:29:18 IST" name="verifyProduct" data-provider="getLoginData" finished-at="2023-08-05T11:29:19 IST" depends-on-methods="mytestpackage.test.StandAlone.submitOrder" duration-ms="537" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{country=nepal, productname=ADIDAS ORIGINAL, password=Bahubali@123, email=bahubali123@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProduct -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:mytestpackage.test.StandAlone@7e4204e2]" started-at="2023-08-05T11:29:19 IST" name="closeBrowser" finished-at="2023-08-05T11:29:19 IST" duration-ms="75" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- mytestpackage.test.StandAlone -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

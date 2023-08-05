@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="mytestpackage.testcomponent.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" parallel="classes" name="Test(failed)">
     <classes>
-      <class name="mytestpackage.test.StandAlone">
+      <class name="mytestpackage.test.ValidationErrorTest">
         <methods>
-          <include name="submitOrder" invocation-numbers="0 1"/>
-          <include name="verifyProduct"/>
+          <include name="errorMessage"/>
           <include name="launchBrowser"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- mytestpackage.test.StandAlone -->
+      </class> <!-- mytestpackage.test.ValidationErrorTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
