@@ -48,6 +48,9 @@ public class StandAlone extends BaseTest {
 		ReceiptPage receiptpage = checkout.clickOnPlaceOrder();
 		Assert.assertEquals(ordersuccess,receiptpage.VerifyOrder());
 	 
+		/* Just for test -- test commentt*/
+		
+		
 		}
 
 
